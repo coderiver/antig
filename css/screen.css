@@ -21,7 +21,7 @@ a img, fieldset { border: none; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-body { background: white; }
+body { background: white; min-width: 960px; }
 
 .header .header__in, .toparea .toparea__in, .news .news__in, .join .join__in, .footer .footer__in { width: 960px; margin: 0 auto; }
 
@@ -31,9 +31,16 @@ body { background: white; }
 .header .header__logo a { background: url('../img/icons-s2b5da7c484.png') 0 0 no-repeat; width: 140px; height: 110px; float: left; margin-right: 200px; }
 .header .header__nav { list-style: none; padding-top: 55px; }
 .header .header__nav li { display: inline-block; margin-right: 91px; font-family: bold, sans-serif; }
+.header .header__nav li.is-active { color: #ce1a45; }
+.header .header__nav li.is-active a { color: #ce1a45; }
 .header .header__nav a { color: #2a3667; text-transform: uppercase; text-decoration: none; }
+.header .header__nav a.is-active { color: #ce1a45; }
 
 .toparea { background: #c21942; }
+.toparea.toparea_inside { padding-top: 0; }
+.toparea.toparea_inside .toparea__in { padding: 15px 0; }
+.toparea.toparea_inside .toparea__donate { padding-top: 0; }
+.toparea.toparea_inside .toparea__donate .donate { height: 50px; line-height: 50px; font-size: 30px; }
 .toparea .toparea__in { overflow: hidden; padding: 60px 0; }
 .toparea .toparea__text { float: left; font-size: 67px; color: white; text-transform: uppercase; width: 440px; overflow: hidden; line-height: 1.1; font-family: light, sans-serif; }
 .toparea .toparea__text strong { display: block; font-weight: normal; font-family: black, sans-serif; }
@@ -54,6 +61,9 @@ body { background: white; }
 .hentry__wrapper { font-size: 0; }
 
 .hentry { display: inline-block; margin-bottom: 25px; width: 48%; margin-right: 2%; font-size: 14px; color: black; }
+.news_list .hentry { width: auto; display: block; margin-right: 0; padding-bottom: 36px; margin-bottom: 36px; border-bottom: 1px solid #d7d7d7; }
+.news_list .hentry:last-child { border-bottom: none; padding-bottom: 0; }
+.news_list .hentry .hentry__pic { width: 460px; }
 .hentry .hentry__published { font-size: 13px; color: #58595b; }
 .hentry .hentry__title, .hentry h3 { font-size: 20px; color: #293764; margin-bottom: 13px; }
 .hentry .hentry__title a, .hentry h3 a { color: #293764; text-decoration: none; font-weight: bold; }
@@ -64,6 +74,12 @@ body { background: white; }
 .hentry .hentry__more { color: #2a3667; font-size: 12px; }
 .hentry .hentry__more a { color: #2a3667; text-decoration: none; font-weight: bold; }
 .hentry .hentry__more a:after { content: " "; background: url('../img/icons-s2b5da7c484.png') 0 -413px no-repeat; width: 6px; height: 9px; display: inline-block; margin-left: 5px; position: relative; top: 1px; }
+
+.pagi { border-top: 1px solid #cbcbcb; padding-top: 6px; font-weight: bold; }
+.pagi a { color: #2a3667; text-decoration: none; vertical-align: middle; margin-right: 3px; }
+.pagi a.is-active, .pagi a:hover { color: #ce1a45; }
+.pagi .pagi__next { border: 1px solid #c6c6c6; display: inline-block; padding: 2px 5px; vertical-align: middle; color: #ce1a45; }
+.pagi .pagi__next i { display: inline-block; vertical-align: middle; background: url('../img/icons-s2b5da7c484.png') 0 -413px no-repeat; width: 6px; height: 9px; }
 
 .join { background: #293764; }
 .join .join__in { overflow: hidden; padding: 40px 0; }

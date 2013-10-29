@@ -1,6 +1,7 @@
 // Normally mainpage styles
 body
 	background: #FFFFFF 
+	min-width: 960px 
 %in
 	width: 960px 
 	margin: 0 auto
@@ -32,13 +33,30 @@ body
 			display: inline-block
 			margin-right: 91px 
 			+bold
+			&.is-active
+				color: #CE1A45 
+				a
+					color: #CE1A45
 		a
 			color: #2a3667
 			text-transform: uppercase
 			text-decoration: none 
+			&.is-active
+				color: #CE1A45 
+		
 			
 .toparea
 	background: #C21942 
+	&.toparea_inside
+		padding-top: 0 
+		.toparea__in
+			padding: 15px 0 
+		.toparea__donate
+			padding-top: 0 
+			.donate
+				height: 50px
+				line-height: 50px
+				font-size: 30px  
 	.toparea__in
 		@extend %in
 		overflow: hidden
@@ -58,7 +76,7 @@ body
 			+black
 	.toparea__slides
 		float: right
-		width: 500px  
+		width: 500px
 		img
 			margin-bottom: 23px 
 		.toparea__pager
@@ -91,6 +109,7 @@ body
 			font-size: 42px 
 			text-transform: uppercase
 			+bold
+
 .news
 	.news__in
 		@extend %in
@@ -132,6 +151,18 @@ body
 	margin-right: 2%  
 	font-size: 14px 
 	color: #000
+	.news_list &
+		width: auto 
+		display: block
+		margin-right: 0
+		padding-bottom: 36px  
+		margin-bottom: 36px 
+		border-bottom: 1px solid #D7D7D7 
+		&:last-child
+			border-bottom: none
+			padding-bottom: 0  
+		.hentry__pic
+			width: 460px 
 	.hentry__published
 		font-size: 13px 
 		color: #58595b
@@ -168,7 +199,28 @@ body
 				margin-left: 5px 
 				position: relative
 				top: 1px 
-
+.pagi
+	border-top: 1px solid #CBCBCB 
+	padding-top: 6px 
+	font-weight: bold
+	a
+		color: #2a3667
+		text-decoration: none
+		vertical-align: middle
+		margin-right: 3px 
+		&.is-active,&:hover
+			color: #CE1A45 
+			
+	.pagi__next
+		border: 1px solid #C6C6C6 
+		display: inline-block
+		padding: 2px 5px
+		vertical-align: middle
+		color: #CE1A45 
+		i
+			display: inline-block
+			vertical-align: middle
+			+s(arrr1)
 .join
 	background: #293764
 	.join__in
