@@ -1,10 +1,11 @@
 // Normally mainpage styles
 body
 	background: #FFFFFF 
-	min-width: 960px 
 %in
 	width: 960px 
 	margin: 0 auto
+	+r(step1)
+		width: 96%  
 .header
 	overflow: hidden
 	&:before
@@ -57,6 +58,12 @@ body
 				height: 50px
 				line-height: 50px
 				font-size: 30px  
+				+r(step2)
+					font-size: 30px 
+					height: 40px 
+					line-height: 40px
+					width: auto
+					display: block 
 	.toparea__in
 		@extend %in
 		overflow: hidden
@@ -67,9 +74,19 @@ body
 		color: #fff 
 		text-transform: uppercase
 		width: 440px 
+		width: 42% 
 		overflow: hidden
 		line-height: 1.1 
 		+lite
+		+r(step1)
+			font-size: 50px 
+		+r(step2)
+			font-size: 25px 
+			margin-bottom: 10px 
+			float: none
+			width: auto 
+			br
+				display: none
 		strong
 			display: block
 			font-weight: normal
@@ -77,8 +94,14 @@ body
 	.toparea__slides
 		float: right
 		width: 500px
+		width: 50% 
+		+r(step2)
+			width: auto 
+			float: none
 		img
 			margin-bottom: 23px 
+			display: block
+			width: 100% 
 		.toparea__pager
 			text-align: center
 			span
@@ -109,6 +132,12 @@ body
 			font-size: 42px 
 			text-transform: uppercase
 			+bold
+			+r(step2)
+				font-size: 30px 
+				height: 40px 
+				line-height: 40px
+				width: auto
+				display: block 
 
 .news
 	.news__in
@@ -151,6 +180,11 @@ body
 	margin-right: 2%  
 	font-size: 14px 
 	color: #000
+	+r(step2)
+		float: none
+		width: auto 
+		margin-bottom: 12px 
+		display: block
 	.news_list &
 		width: auto 
 		display: block
@@ -158,11 +192,23 @@ body
 		padding-bottom: 36px  
 		margin-bottom: 36px 
 		border-bottom: 1px solid #D7D7D7 
+		+r(step2)
+			padding: 10px 0
+			margin-bottom: 0  
 		&:last-child
 			border-bottom: none
 			padding-bottom: 0  
 		.hentry__pic
 			width: 460px 
+			+r(step2)
+				float: none
+				width: auto 
+				margin-bottom: 10px 
+				width: 100% 
+				display: block
+				img
+					width: 100%
+					display: block 
 	.hentry__published
 		font-size: 13px 
 		color: #58595b
@@ -177,6 +223,9 @@ body
 	.hentry__pic
 		float: left
 		margin-right: 20px 
+		+r(step1)
+			float: none
+			margin-bottom: 10px 
 	.hentry__content
 		overflow: hidden
 	.hentry__text
@@ -228,13 +277,21 @@ body
 		overflow: hidden
 		padding: 40px 0
 	.join__text
-		width: 476px 
+		width: 44% 
 		float: left
 		font-size: 20px 
 		color: #fff 
+		+r(step2)
+			float: none
+			width: auto 
+			margin-bottom: 20px 
 	.join__form
 		float: right
-		width: 390px 
+		
+		width: 36% 
+		+r(step2)
+			float: none
+			width: auto 
 	.join__title
 		font-size: 67px 
 		text-align: center
@@ -243,6 +300,8 @@ body
 		text-transform: uppercase 
 		margin-bottom: 20px 
 		+bold
+		+r(step2)
+			font-size: 35px 
 .row
 	margin-bottom: 18px 
 	label
@@ -256,6 +315,8 @@ body
 		padding: 5px   
 		font-size: 20px 
 		border: 2px solid #000 
+		+r(step2)
+			width: 90% 
 	&.row_inline
 		label
 			display: inline-block
@@ -265,6 +326,8 @@ body
 			margin-left: 3px 
 .row_submit
 	text-align: right
+	+r(step2)
+		text-align: left
 	a
 		display: inline-block
 		font-size: 40px 
@@ -275,6 +338,10 @@ body
 		height: 61px 
 		line-height: 61px 
 		+bold
+		+r(step2)
+			height: 35px 
+			line-height: 35px
+			font-size: 24px 
 .select
 	position: relative
 	&:before
@@ -297,11 +364,17 @@ body
 		overflow: hidden
 		@extend %in
 		padding: 30px 0 40px 0
+		
+
 	.footer__list
 		float: left
 		width: 210px 
 		list-style: none
 		font-size: 11px
+		+r(step2)
+			
+			width: 45% 
+			margin-bottom: 15px 
 		a
 			color: #999999
 			text-decoration: none
@@ -310,6 +383,11 @@ body
 		width: 180px 
 		font-size: 11px 
 		color: #999999 
+		+r(step2)
+			float: none
+			width: auto 
+			clear: both
+			margin-bottom: 15px 
 		label
 			display: block
 			padding-bottom: 3px 
@@ -320,3 +398,7 @@ body
 	.footer__copy
 		font-size: 11px 
 		color: #2a3667 
+		+r(step2)
+			float: none
+			width: auto 
+			margin-bottom: 15px 
