@@ -26,12 +26,21 @@ body { background: white; }
 .header .header__in, .toparea .toparea__in, .news .news__in, .join .join__in, .footer .footer__in { width: 960px; margin: 0 auto; }
 @media only screen and (max-width: 960px) { .header .header__in, .toparea .toparea__in, .news .news__in, .join .join__in, .footer .footer__in { width: 96%; } }
 
+* { outline: 1px solid red; }
+
 .header { overflow: hidden; }
 .header:before { content: " "; position: absolute; background: white; top: 0; height: 9px; left: -10px; right: -10px; -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.6); box-shadow: 0 0px 10px rgba(0, 0, 0, 0.6); }
+@media only screen and (max-width: 600px) { .header:before { display: none; } }
 .header .header__in { padding: 25px 0 12px 0; overflow: hidden; }
+@media only screen and (max-width: 600px) { .header .header__in { padding-top: 12px; } }
 .header .header__logo a { background: url('../img/icons-s2b5da7c484.png') 0 0 no-repeat; width: 140px; height: 110px; float: left; margin-right: 200px; }
+@media only screen and (max-width: 960px) { .header .header__logo a { margin-right: 50px; } }
 .header .header__nav { list-style: none; padding-top: 55px; }
+@media only screen and (max-width: 960px) { .header .header__nav { padding-top: 30px; } }
+@media only screen and (max-width: 600px) { .header .header__nav { overflow: hidden; } }
 .header .header__nav li { display: inline-block; margin-right: 91px; font-family: bold, sans-serif; }
+@media only screen and (max-width: 960px) { .header .header__nav li { margin-right: 40px; } }
+@media only screen and (max-width: 600px) { .header .header__nav li { display: block; margin-bottom: 10px; } }
 .header .header__nav li.is-active { color: #ce1a45; }
 .header .header__nav li.is-active a { color: #ce1a45; }
 .header .header__nav a { color: #2a3667; text-transform: uppercase; text-decoration: none; }
@@ -44,6 +53,7 @@ body { background: white; }
 .toparea.toparea_inside .toparea__donate .donate { height: 50px; line-height: 50px; font-size: 30px; }
 @media only screen and (max-width: 600px) { .toparea.toparea_inside .toparea__donate .donate { font-size: 30px; height: 40px; line-height: 40px; width: auto; display: block; } }
 .toparea .toparea__in { overflow: hidden; padding: 60px 0; }
+@media only screen and (max-width: 600px) { .toparea .toparea__in { padding: 20px 0; } }
 .toparea .toparea__text { float: left; font-size: 67px; color: white; text-transform: uppercase; width: 440px; width: 42%; overflow: hidden; line-height: 1.1; font-family: light, sans-serif; }
 @media only screen and (max-width: 960px) { .toparea .toparea__text { font-size: 50px; } }
 @media only screen and (max-width: 600px) { .toparea .toparea__text { font-size: 25px; margin-bottom: 10px; float: none; width: auto; }
